@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="question_box" id="questionBox">
+            <img src="fingerprint.webp" class="fingerprint_photo" alt="Fingerprint photo">
+            <h1 class="header_text">Would Y<img src="DDm.gif" style="width: 25px; height: 25px; margin: -4px;">u Marry Me?</h1>
+            <div class="buttons">
+                <button class="btn yesButton" id="yesButton" onclick="shapeHeart()">Yes</button>
+                <button class="btn noButton" id="noButton" onclick="showNoGif()">No</button>
+            </div>
+        </div>
+        <div class="noGif_container">
+            <img id="noGif" src="angryomar.gif" alt="No gif" style="display: none; width: 50vh; height: 50vh; align-items: center; cursor: pointer;">
+        </div>
+    </div>
+    <script>
+        function nextPage() {
+            window.location.href = "yes.html"; // Redirect to yes.html
+        }
+
+        function showNoGif() {
+            document.getElementById('noGif').style.display = 'block';
+            document.getElementById('questionBox').style.display = 'none';
+        }
+
+        function shapeHeart() {
+            // Create first fingerprint for the left side of the heart
+            var fingerprint1 = document.createElement('img');
+            fingerprint1.src = 'fingerprint.webp'; // Use fingerprint.webp
+            fingerprint1.classList.add('fingerprint_heart');
+            fingerprint1.style.position = 'absolute';
+            fingerprint1.style.left = '225px'; // Adjust left position relative to .question_box
+            fingerprint1.style.top = '40px'; // Adjust top position relative to .question_box
+            fingerprint1.style.transform = 'rotate(80deg)'; // Rotate by 80 degrees
+            
+            // Append fingerprints to the question box
+            var questionBox = document.getElementById('questionBox');
+            questionBox.appendChild(fingerprint1);
+            
+            // Disable the "Yes" button after shaping the heart
+            document.getElementById('yesButton').disabled = true;
+
+            // Redirect to yes.html after a delay (simulating animation or processing time)
+            setTimeout(function() {
+                nextPage();
+            }, 1000); // Adjust delay as needed
+        }
+
+        // Add event listener to the "No" GIF to reload the page when clicked
+        document.getElementById('noGif').addEventListener('click', function() {
+            window.location.href = 'home.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: #0b0b0b;
+    background-image: url('heartfinger.jpg');
+    background-repeat: repeat;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    place-items: center;
+}
+
+.question_box {
+    background-color: #ffffff;
+    border: 2px solid #000;
+    border-radius: 20px; /* Increase border radius for rounded corners */
+    padding: 40px; /* Increase padding for more space inside the box */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 100%; /* Adjust max-width as needed */
+    width: 90%; /* Ensure box takes up 80% of the container width */
+    margin-bottom: 20px; /* Add margin to separate from the GIF container */
+    position: relative; /* Ensure relative positioning for absolute elements */
+    box-shadow: 0 0 6px #f8faf8, 0 0 5px #ffffff, 0 0 10px #ffffff;
+}
+
+.header_text {
+    font-family: 'Didot','Optima', 'Avantgarde', 'cursive','Nunito';
+    font-size: 38px; /* Increase font size for larger text */
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #ffffff;
+    color: rgb(233, 48, 48);
+    padding: 15px 30px; /* Increase padding for larger buttons */
+    text-align: center;
+    font-size: 18px; /* Increase font size for larger buttons */
+    cursor: pointer;
+    border: 2px solid #000;
+    border-radius: 8px; /* Increase border radius for rounded buttons */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.noGif_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+   
+}
+
+
+.fingerprint_photo {
+    width: 100px; /* Adjust size of fingerprint photo */
+    height: 100px;
+    margin-bottom: 20px; /* Add margin for separation */
+}
+
+.fingerprint_heart {
+    width: 100px; /* Adjust size of fingerprint in heart */
+    height: 100px;
+    z-index: 2; /* Ensure fingerprint is above other elements */
+}
+

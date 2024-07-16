@@ -35,6 +35,8 @@
 
         envelope.addEventListener('click', () => {
             envelope.classList.toggle('flap');
+
+            if (envelope.classList.contains("flap"))
             setTimeout(enterFullScreen, 1500); // Adjust delay to match the envelope opening animation
         });
     </script>
